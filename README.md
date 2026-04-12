@@ -1,92 +1,104 @@
-📊 Customer Churn Analysis – Telecom Industry
-🔹 Overview
+🚀 Customer Churn & Revenue Risk Analysis (Telecom)
+📊 Overview
 
-Customer churn is a major challenge in the telecom industry, directly affecting revenue and customer lifetime value.
+Customer churn is a critical business problem in the telecom industry, directly impacting revenue, profitability, and customer lifetime value.
 
-This project analyzes customer data to identify churn patterns, understand key drivers, and recommend actionable strategies to improve customer retention.
+This project goes beyond basic churn prediction and focuses on:
 
-🔹 Business Objective
-Predict customer churn
-Identify key factors driving churn
-Estimate revenue impact
-Provide data-driven business recommendations
-🔹 Dataset
-Telco Customer Churn Dataset
-~7000 customer records
-Features include:
-Demographics (gender, senior citizen, etc.)
-Contract type
-Payment methods
-Monthly and total charges
-Internet services
-🔹 Approach
+Identifying high-risk customer segments
+Quantifying revenue loss due to churn
+Delivering actionable business recommendations
+🎯 Business Objectives
+Predict customer churn using machine learning
+Identify key drivers influencing churn
+Segment high-risk customers
+Estimate revenue loss from churn
+Provide data-driven retention strategies
+📁 Dataset
+Source: Telco Customer Churn Dataset (~7000 records)
+Key Features:
+Demographics (Gender, Senior Citizen, Dependents)
+Account Info (Tenure, Contract Type)
+Services (Internet, Streaming, Tech Support)
+Billing (Monthly Charges, Total Charges)
+Target Variable: Churn
+⚙️ Approach
 1. Data Preprocessing
 Removed irrelevant columns (customerID)
-Converted TotalCharges to numeric
-Handled missing values
-Applied one-hot encoding for categorical variables
-2. Model Development
-Logistic Regression model used for classification
-Addressed class imbalance using class_weight='balanced'
-Train-test split (80/20)
-3. Model Evaluation
-Accuracy: ~73%
-Recall (Churn): ~80%
-Precision: ~50%
+Converted categorical variables using one-hot encoding
+Checked for missing values and data consistency
+2. Feature Engineering
+Created binary churn variable (Churn_Yes)
+Prepared dataset for machine learning
+3. Model Building
+Model: Logistic Regression
+Train-Test Split: 80/20
+Handled class imbalance using:
+class_weight = 'balanced'
+4. Model Evaluation
+Accuracy Score
+Confusion Matrix
+Precision, Recall, F1-score
+📈 Key Insights
+Customers with month-to-month contracts show significantly higher churn rates
+Fiber optic users have higher churn compared to other service types
+Customers using electronic check payments are more likely to churn
+Short-tenure customers are at higher risk
+💰 Revenue Impact Analysis
+Calculated churn rate across customer segments
+Estimated monthly revenue loss due to churn
+Identified high-value customers contributing to revenue risk
 
-📌 Focus was on recall, as identifying churn customers is critical for retention strategies.
+👉 This transforms the project from prediction → business impact analysis
 
-🔹 Key Insights
-📌 Contract Type Impact
-Month-to-month customers → High churn (~30–34%)
-1-year contracts → Lower churn (~11%)
-2-year contracts → Very low churn (~2–3%)
+🧠 Feature Importance (Drivers of Churn)
 
-👉 Long-term contracts significantly improve retention
+Top influencing factors:
 
-📌 Internet Service Impact
-Fiber optic users → High churn (~42%)
-Non-fiber users → Lower churn (~14%)
+Contract type
+Internet service (Fiber optic)
+Payment method
+Monthly charges
+Tenure
+📊 Business Recommendations
+Encourage customers to switch to long-term contracts (1-year / 2-year)
+Provide targeted retention offers for fiber optic users
+Improve experience for electronic payment users
+Focus retention campaigns on low-tenure customers
+Introduce loyalty incentives for high-value customers
+📊 Power BI Dashboard (Recommended)
 
-👉 Indicates potential issues with pricing or service quality
+To make this project business-ready:
 
-📌 Pricing Impact
-Customers with higher monthly charges show higher churn tendency
-🔹 Revenue Impact
-Revenue loss estimated based on churned customers’ monthly charges
-Even a small reduction in churn can lead to significant revenue gains
-🔹 Business Recommendations
-Encourage customers to shift to long-term contracts
-Improve pricing or service quality for fiber users
-Target high-risk segments with retention campaigns
-Focus on early customer engagement
-🔹 Tools & Technologies
-Python (Pandas, Scikit-learn)
-Machine Learning (Logistic Regression)
-Data Cleaning & Feature Engineering
-🔹 Project Outcome
+Churn Rate KPI
+Revenue Loss KPI
+Churn by Contract Type
+Churn by Payment Method
+Customer Segmentation
 
-This project demonstrates how analytics can:
+👉 (Add screenshots here once you build dashboard)
 
-Identify high-risk customers
-Explain churn behavior
-Support business decision-making
-🔹 Future Enhancements
+🛠️ Tech Stack
+Python (Pandas, NumPy)
+Scikit-learn
+Data Preprocessing & Machine Learning
+Power BI (for visualization)
+📌 Business Impact
+
+This project demonstrates how data analytics can:
+
+Reduce churn risk
+Improve customer retention strategies
+Support revenue protection decisions
+
+👉 A 5% reduction in churn can significantly increase annual revenue.
+
+🚀 Future Improvements
 Use advanced models (Random Forest, XGBoost)
-Build Power BI dashboard
-Perform cohort and segmentation analysis
-Deploy predictive model
-💡 Key Takeaway
-
-This project focuses not just on prediction but on translating data into business insights and actionable strategies.
-
-🚀 How to Run
-python churn_analysis.py
-
+Deploy model using Streamlit
+Automate pipeline for real-time predictions
+Integrate with business dashboards
 
 👤 Author
-Meruva Vijaya Rama Seshu
-
-
-🔥 Final Note
-This project reflects a strong focus on business-driven analytics, moving beyond technical modeling to real-world impact.
+Ramashehu
+Data Analyst | Business Intelligence | Machine Learning
