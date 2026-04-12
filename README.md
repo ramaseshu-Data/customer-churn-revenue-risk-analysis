@@ -82,8 +82,11 @@ This project focuses not just on prediction but on translating data into busines
 
 🚀 How to Run
 python churn_analysis.py
+
+
 👤 Author
 Meruva Vijaya Rama Seshu
-🔥 Final Note
 
+
+🔥 Final Note
 This project reflects a strong focus on business-driven analytics, moving beyond technical modeling to real-world impact.
