@@ -1,0 +1,90 @@
+📊 Customer Churn Analysis – Telecom Industry
+🔹 Overview
+
+Customer churn is a major challenge in the telecom industry, directly affecting revenue and customer lifetime value.
+
+This project analyzes customer data to identify churn patterns, understand key drivers, and recommend actionable strategies to improve customer retention.
+
+🔹 Business Objective
+Predict customer churn
+Identify key factors driving churn
+Estimate revenue impact
+Provide data-driven business recommendations
+🔹 Dataset
+Telco Customer Churn Dataset
+~7000 customer records
+Features include:
+Demographics (gender, senior citizen, etc.)
+Contract type
+Payment methods
+Monthly and total charges
+Internet services
+🔹 Approach
+1. Data Preprocessing
+Removed irrelevant columns (customerID)
+Converted TotalCharges to numeric
+Handled missing values
+Applied one-hot encoding for categorical variables
+2. Model Development
+Logistic Regression model used for classification
+Addressed class imbalance using class_weight='balanced'
+Train-test split (80/20)
+3. Model Evaluation
+Accuracy: ~73%
+Recall (Churn): ~80%
+Precision: ~50%
+
+📌 Focus was on recall, as identifying churn customers is critical for retention strategies.
+
+🔹 Key Insights
+📌 Contract Type Impact
+Month-to-month customers → High churn (~30–34%)
+1-year contracts → Lower churn (~11%)
+2-year contracts → Very low churn (~2–3%)
+
+👉 Long-term contracts significantly improve retention
+
+📌 Internet Service Impact
+Fiber optic users → High churn (~42%)
+Non-fiber users → Lower churn (~14%)
+
+👉 Indicates potential issues with pricing or service quality
+
+📌 Pricing Impact
+Customers with higher monthly charges show higher churn tendency
+🔹 Revenue Impact
+Revenue loss estimated based on churned customers’ monthly charges
+Even a small reduction in churn can lead to significant revenue gains
+🔹 Business Recommendations
+Encourage customers to shift to long-term contracts
+Improve pricing or service quality for fiber users
+Target high-risk segments with retention campaigns
+Focus on early customer engagement
+🔹 Tools & Technologies
+Python (Pandas, Scikit-learn)
+Machine Learning (Logistic Regression)
+Data Cleaning & Feature Engineering
+🔹 Project Outcome
+
+This project demonstrates how analytics can:
+
+Identify high-risk customers
+Explain churn behavior
+Support business decision-making
+🔹 Future Enhancements
+Use advanced models (Random Forest, XGBoost)
+Build Power BI dashboard
+Perform cohort and segmentation analysis
+Deploy predictive model
+💡 Key Takeaway
+
+This project focuses not just on prediction but on translating data into business insights and actionable strategies.
+
+🚀 How to Run
+python churn_analysis.py
+👤 Author
+
+Meruva Vijaya Rama Seshu
+🔥 Final Note
+
+This project reflects a strong focus on business-driven analytics, moving beyond technical modeling to real-world impact.
