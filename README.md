@@ -1,152 +1,110 @@
-# 🚀 Customer Churn & Revenue Risk Analysis (Telecom)
+🚀 Customer Churn & Revenue Risk Analysis (Telecom)
+📊 Dashboard Preview
 
-## 📊 Dashboard Preview
-![Dashboard](image_dashboard.png)
+🎯 Business Objective
 
----
+Customer churn is a major revenue leakage point in telecom.
 
-## 📊 Business Problem
+This project goes beyond prediction and focuses on:
 
-Customer churn directly impacts revenue, profitability, and customer lifetime value in telecom businesses.
+Identifying high-value customers at risk of churn
+Quantifying revenue exposure
+Recommending targeted retention strategies
+💡 Key Business Impact
+~26% customers at risk of churn
+Estimated ~139K+ revenue exposed to churn
+Top 20% high-risk customers contribute to majority of revenue loss
+Targeting these customers can significantly reduce revenue leakage
 
-This project focuses on:
-- Identifying high-risk customer segments  
-- Quantifying revenue loss due to churn  
-- Delivering actionable, data-driven business recommendations  
+👉 Insight: Not all churn is equal — prioritization is critical
 
----
+🧠 Analytical Approach
+Data Processing
+Cleaned and validated dataset (~7000 records)
+Applied one-hot encoding
+Engineered churn binary variable
+Modeling
+Logistic Regression with class_weight='balanced'
+Train/Test split: 80/20
+Evaluation
+Accuracy: ~73%
+Focus on Recall (churn detection) over accuracy
+🔍 Key Drivers of Churn
 
-## 🎯 Key Outcomes
+Top influencing factors:
 
-- Built churn prediction model (~73% accuracy)  
-- Identified **month-to-month customers as highest churn risk (~43%)**  
-- Found **fiber optic users as high churn contributors**  
-- Estimated **~26% overall churn rate**  
-- Quantified **~139K+ revenue at risk**  
-- Highlighted segments driving **~85% of revenue loss**  
+Contract Type (Month-to-Month)
+Tenure (Low tenure = high risk)
+Internet Service (Fiber Optic)
+Payment Method (Electronic Check)
+Monthly Charges
 
----
+👉 These are actionable business levers
 
-## 📁 Dataset
+📊 Customer Risk Segmentation
 
-- Source: Telco Customer Churn Dataset (~7000 records)  
-- Features:  
-  - Demographics (Gender, Senior Citizen, Dependents)  
-  - Account Info (Tenure, Contract Type)  
-  - Services (Internet, Streaming, Tech Support)  
-  - Billing (Monthly & Total Charges)  
-- Target Variable: `Churn`  
+Customers were segmented based on:
 
----
+Churn probability
+Revenue contribution
+Segments:
+🔴 High Risk + High Value → Immediate retention focus
+🟠 High Risk + Low Value → Selective targeting
+🟢 Low Risk + High Value → Loyalty programs
+⚪ Low Risk + Low Value → Minimal focus
 
-## ⚙️ Approach
+👉 This enables cost-efficient retention strategy
 
-### 1. Data Preparation
-- Removed `customerID`  
-- Applied one-hot encoding  
-- Validated data quality  
+💰 Revenue Impact Simulation
 
-### 2. Feature Engineering
-- Created `Churn_Yes` binary variable  
-- Prepared dataset for modeling  
+Instead of just measuring churn, we simulate business impact:
 
-### 3. Model Development
-- Logistic Regression  
-- Train/Test Split: 80/20  
-- Handled imbalance using:
-- 
-### 4. Model Evaluation
-- Accuracy: ~73%  
-- Evaluated using:  
-  - Confusion Matrix  
-  - Precision, Recall, F1-score  
-- Improved recall for churn detection  
+If churn reduced by 10% → Significant revenue recovery
+Targeting top high-risk segments yields maximum ROI
 
----
+👉 Focus should be on:
 
-## 📈 Key Insights
+Month-to-month contracts
+Fiber optic users
+Low tenure high spenders
+📊 Power BI Dashboard
+Features:
+Churn Rate KPI
+Revenue at Risk KPI
+Segment-wise churn analysis
+Contract & service breakdown
+Risk-based revenue visualization
+Key Insight:
 
-- Month-to-month contracts have highest churn  
-- Fiber optic users churn more than others  
-- Electronic check users show higher churn  
-- Low-tenure customers are highest risk  
+~85% of revenue at risk comes from a small group of high-risk customers
 
----
+📌 Business Recommendations
+Convert month-to-month → long-term contracts
+Improve service quality for fiber users
+Introduce retention offers for high-value customers
+Target low-tenure customers early
+Optimize pricing / payment experience
+🛠️ Tech Stack
+Python (Pandas, NumPy)
+Scikit-learn
+Power BI
+🚀 What Makes This Project Different
 
-## 💰 Revenue Impact Analysis
+Unlike basic churn projects, this analysis:
 
-- Overall churn rate: ~26%  
-- High-risk segments drive most revenue loss:  
-  - Month-to-month contracts  
-  - Fiber optic users  
+Connects ML predictions → revenue impact
+Prioritizes customers based on business value
+Provides actionable retention strategy
 
-👉 Shifted focus from prediction → business impact  
+👉 Focus is on decision-making, not just prediction
 
----
+🔮 Future Enhancements
+Advanced models (XGBoost, Random Forest)
+Real-time churn monitoring pipeline
+Deployment using Streamlit
 
-## 📊 Power BI Dashboard
 
-### Key Features:
-- Total Customers KPI  
-- Churn Customers KPI  
-- Churn Rate KPI  
-- Revenue at Risk KPI  
-- Churn by Contract Type  
-- Churn by Internet Service  
-- Revenue at Risk by Segment  
+👤 Author
 
-### Key Insight:
-Month-to-month contracts and fiber optic users contribute to ~85% of revenue at risk.
-
----
-
-## 🧠 Key Drivers of Churn
-
-- Contract type  
-- Internet service (Fiber optic)  
-- Payment method  
-- Monthly charges  
-- Customer tenure  
-
----
-
-## 📊 Business Recommendations
-
-- Promote long-term contracts  
-- Target fiber optic users  
-- Improve electronic payment experience  
-- Focus on low-tenure customers  
-- Offer loyalty incentives  
-
----
-
-## 🛠️ Tech Stack
-
-- Python (Pandas, NumPy)  
-- Scikit-learn  
-- Power BI  
-
----
-
-## 📌 Business Impact
-
-- Identified high-risk segments  
-- Quantified revenue loss  
-- Enabled data-driven retention strategies  
-
-👉 Small churn reduction = major revenue gain  
-
----
-
-## 🚀 Future Improvements
-
-- Advanced ML models (XGBoost, Random Forest)  
-- Streamlit deployment  
-- Real-time pipeline automation  
-
----
-
-## 👤 Author
-
-Ramashehu  
-Data Analyst | Business Intelligence | Machine Learning
+Ramashehu
+Data Analyst | SQL | Power BI | Machine Learning
