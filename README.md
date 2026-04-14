@@ -1,101 +1,122 @@
-🚀 Customer Churn & Revenue Risk Analysis (Telecom)
+# 🚀 Customer Churn & Revenue Risk Analysis (Telecom)
 
+## 📊 Business Problem
 
-📊 Overview
+Customer churn directly impacts revenue, profitability, and customer lifetime value in telecom businesses.
 
-Customer churn is a critical business problem in the telecom industry, directly impacting revenue, profitability, and customer lifetime value.
+This project goes beyond basic churn prediction and focuses on:
 
-In this project, I analyzed telecom customer data to:
+- Identifying high-risk customer segments
+- Quantifying revenue loss due to churn
+- Delivering actionable, data-driven business recommendations
 
-Identify high-risk customer segments
-Quantify revenue loss due to churn
-Deliver actionable business recommendations
-🎯 Business Objectives
-Predict customer churn using machine learning
-Identify key drivers influencing churn
-Segment high-risk customers
-Estimate revenue loss from churn
-Provide data-driven retention strategies
-📁 Dataset
-Source: Telco Customer Churn Dataset (~7000 records)
-Key Features:
-Demographics (Gender, Senior Citizen, Dependents)
-Account Info (Tenure, Contract Type)
-Services (Internet, Streaming, Tech Support)
-Billing (Monthly Charges, Total Charges)
-Target Variable: Churn
-⚙️ Approach
-1. Data Preprocessing
-Removed irrelevant column (customerID)
-Converted categorical variables using one-hot encoding
-Validated data quality and missing values
-2. Feature Engineering
-Created binary churn variable (Churn_Yes)
-Prepared dataset for modeling
-3. Model Building
-Model: Logistic Regression
-Train-Test Split: 80/20
-Handled class imbalance using:
-class_weight = 'balanced'
-4. Model Evaluation
-Accuracy Score: ~73%
-Evaluated using Confusion Matrix and Classification Report
-Balanced recall improved for churn prediction
+---
+
+## 🎯 Key Outcomes
+
+- Built a churn prediction model with ~73% accuracy
+- Identified **month-to-month customers as highest churn risk (~43%)**
+- Discovered **fiber optic users contribute heavily to churn**
+- Estimated **~26% overall churn rate**
+- Quantified **revenue at risk (~139K+)**
+- Highlighted segments contributing to ~85% of revenue loss
+
+---
+
+## 📁 Dataset
+
+- Source: Telco Customer Churn Dataset (~7000 records)
+- Features:
+  - Demographics (Gender, Senior Citizen, Dependents)
+  - Account Info (Tenure, Contract Type)
+  - Services (Internet, Streaming, Tech Support)
+  - Billing (Monthly & Total Charges)
+- Target Variable: `Churn`
+
+---
+
+## ⚙️ Approach
+
+### 1. Data Preparation
+- Removed irrelevant column (`customerID`)
+- Converted categorical variables using one-hot encoding
+- Validated data quality and handled inconsistencies
+
+### 2. Feature Engineering
+- Created binary churn indicator (`Churn_Yes`)
+- Structured dataset for machine learning
+
+### 3. Model Development
+- Model: Logistic Regression
+- Train/Test Split: 80/20
+- Handled class imbalance using:
+  ```python
+  class_weight = 'balanced'4. Model Evaluation
+Accuracy: ~73%
+Evaluated using:
+Confusion Matrix
+Precision, Recall, F1-score
+Improved recall for churn detection (business-critical)
 📈 Key Insights
-Customers with month-to-month contracts show significantly higher churn (~30%+)
-Fiber optic users have higher churn rates compared to other service types
-Customers using electronic check payments are more likely to churn
+Month-to-month contracts show highest churn rates
+Fiber optic customers churn significantly more than DSL/No-service users
+Electronic check users have higher churn probability
 Low-tenure customers are at highest risk
 💰 Revenue Impact Analysis
-Average churn rate: ~26%
-Estimated monthly revenue loss from churn: significant portion of total revenue
+Overall churn rate: ~26%
 High-risk segments contribute disproportionately to revenue loss
+Majority of revenue risk driven by:
+Month-to-month contracts
+Fiber optic customers
 
-👉 This shifts the analysis from prediction → business impact and revenue risk
+👉 This shifts the project from prediction → business decision-making
+
+📊 Power BI Dashboard
+
+An interactive dashboard was built to translate analysis into business insights:
+
+Key Features:
+Total Customers KPI
+Churn Customers KPI
+Churn Rate KPI
+Revenue at Risk KPI
+Churn Rate by Contract Type
+Churn Rate by Internet Service
+Revenue at Risk by Segment
+Key Insight:
+
+Month-to-month contracts and fiber optic users contribute to ~85% of revenue at risk.
 
 🧠 Key Drivers of Churn
-
-Top influencing factors identified:
-
 Contract type
 Internet service (Fiber optic)
 Payment method
 Monthly charges
 Customer tenure
 📊 Business Recommendations
-Encourage customers to move to long-term contracts (1–2 years)
-Provide targeted retention offers for fiber optic users
-Improve experience for electronic payment users
-Focus retention strategies on low-tenure customers
-Introduce loyalty incentives for high-value customers
-📊 Power BI Dashboard (Next Phase)
-
-To enhance business usability, this project can be extended with a dashboard including:
-
-Churn Rate KPI
-Revenue Loss KPI
-Churn by Contract Type
-Churn by Payment Method
-Customer Segmentation
+Promote long-term contracts (1–2 years)
+Target retention strategies for fiber optic users
+Improve experience for electronic payment customers
+Focus retention on low-tenure customers
+Introduce loyalty incentives for high-value segments
 🛠️ Tech Stack
 Python (Pandas, NumPy)
-Scikit-learn
-Data Preprocessing & Machine Learning
-Power BI (planned for visualization)
+Scikit-learn (Machine Learning)
+Power BI (Dashboard & Visualization)
 📌 Business Impact
-Identified high-risk segments driving churn
-Quantified churn impact on revenue
-Provided actionable retention strategies
 
-👉 Even a 5% reduction in churn can lead to substantial annual revenue savings.
+This project demonstrates how analytics can:
+
+Reduce churn risk
+Improve retention strategies
+Protect revenue
+
+👉 Even a small reduction in churn can significantly increase profitability.
 
 🚀 Future Improvements
-Apply advanced models (Random Forest, XGBoost)
-Build interactive Power BI dashboard
+Apply advanced ML models (Random Forest, XGBoost)
 Deploy model using Streamlit
-Automate pipeline for real-time prediction
-
-
+Automate real-time churn prediction pipeline
 👤 Author
 
 Ramashehu
