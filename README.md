@@ -1,11 +1,15 @@
 # 🚀 Customer Churn & Revenue Risk Analysis (Telecom)
 
+## 📊 Dashboard Preview
+![Dashboard](image_dashboard.png)
+
+---
+
 ## 📊 Business Problem
 
 Customer churn directly impacts revenue, profitability, and customer lifetime value in telecom businesses.
 
-This project goes beyond basic churn prediction and focuses on:
-
+This project focuses on:
 - Identifying high-risk customer segments
 - Quantifying revenue loss due to churn
 - Delivering actionable, data-driven business recommendations
@@ -14,12 +18,12 @@ This project goes beyond basic churn prediction and focuses on:
 
 ## 🎯 Key Outcomes
 
-- Built a churn prediction model with ~73% accuracy
+- Built churn prediction model (~73% accuracy)
 - Identified **month-to-month customers as highest churn risk (~43%)**
-- Discovered **fiber optic users contribute heavily to churn**
+- Found **fiber optic users as high churn contributors**
 - Estimated **~26% overall churn rate**
-- Quantified **revenue at risk (~139K+)**
-- Highlighted segments contributing to ~85% of revenue loss
+- Quantified **~139K+ revenue at risk**
+- Highlighted segments driving **~85% of revenue loss**
 
 ---
 
@@ -38,50 +42,47 @@ This project goes beyond basic churn prediction and focuses on:
 ## ⚙️ Approach
 
 ### 1. Data Preparation
-- Removed irrelevant column (`customerID`)
-- Converted categorical variables using one-hot encoding
-- Validated data quality and handled inconsistencies
+- Removed `customerID`
+- Applied one-hot encoding
+- Validated data quality
 
 ### 2. Feature Engineering
-- Created binary churn indicator (`Churn_Yes`)
-- Structured dataset for machine learning
+- Created `Churn_Yes` binary variable
+- Prepared dataset for modeling
 
 ### 3. Model Development
-- Model: Logistic Regression
+- Logistic Regression
 - Train/Test Split: 80/20
-- Handled class imbalance using:
-  ```python
-  class_weight = 'balanced'4. Model Evaluation
+- Handled imbalance:
+```python
+class_weight = 'balanced'
+4. Model Evaluation
 Accuracy: ~73%
 Evaluated using:
 Confusion Matrix
 Precision, Recall, F1-score
-Improved recall for churn detection (business-critical)
+Improved recall for churn detection
 📈 Key Insights
-Month-to-month contracts show highest churn rates
-Fiber optic customers churn significantly more than DSL/No-service users
-Electronic check users have higher churn probability
-Low-tenure customers are at highest risk
+Month-to-month contracts have highest churn
+Fiber optic users churn more than others
+Electronic check users show higher churn
+Low-tenure customers are highest risk
 💰 Revenue Impact Analysis
 Overall churn rate: ~26%
-High-risk segments contribute disproportionately to revenue loss
-Majority of revenue risk driven by:
+High-risk segments drive most revenue loss:
 Month-to-month contracts
-Fiber optic customers
+Fiber optic users
 
-👉 This shifts the project from prediction → business decision-making
+👉 Shifted focus from prediction → business impact
 
 📊 Power BI Dashboard
-
-An interactive dashboard was built to translate analysis into business insights:
-
 Key Features:
 Total Customers KPI
 Churn Customers KPI
 Churn Rate KPI
 Revenue at Risk KPI
-Churn Rate by Contract Type
-Churn Rate by Internet Service
+Churn by Contract Type
+Churn by Internet Service
 Revenue at Risk by Segment
 Key Insight:
 
@@ -94,29 +95,26 @@ Payment method
 Monthly charges
 Customer tenure
 📊 Business Recommendations
-Promote long-term contracts (1–2 years)
-Target retention strategies for fiber optic users
-Improve experience for electronic payment customers
-Focus retention on low-tenure customers
-Introduce loyalty incentives for high-value segments
+Promote long-term contracts
+Target fiber optic users
+Improve electronic payment experience
+Focus on low-tenure customers
+Offer loyalty incentives
 🛠️ Tech Stack
 Python (Pandas, NumPy)
-Scikit-learn (Machine Learning)
-Power BI (Dashboard & Visualization)
+Scikit-learn
+Power BI
 📌 Business Impact
+Identified high-risk segments
+Quantified revenue loss
+Enabled data-driven retention strategies
 
-This project demonstrates how analytics can:
-
-Reduce churn risk
-Improve retention strategies
-Protect revenue
-
-👉 Even a small reduction in churn can significantly increase profitability.
+👉 Small churn reduction = major revenue gain
 
 🚀 Future Improvements
-Apply advanced ML models (Random Forest, XGBoost)
-Deploy model using Streamlit
-Automate real-time churn prediction pipeline
+Advanced ML models (XGBoost, Random Forest)
+Streamlit deployment
+Real-time pipeline automation
 👤 Author
 
 Ramashehu
